@@ -1,15 +1,24 @@
 .container{
-    position: relative;
+    position: absolute;
     --lat: 120;
     --long: 200;
 }
 
 .truck{
-     padding-left: calc(10px * var(--lat));
-    padding-top: calc( 1px * var(--long));
+    padding-left: calc(50px + 3.08px * var(--long));
+    padding-top: calc(50px + 3.08px * var(--lat));
 }
 
 .waypoint{
     width: 2vw;
     height: 2vw;
+}
+
+.license{
+    background-color: rgb(207, 238, 182);
+    border-radius: 100px; 
+    border: 1px #CCF solid;
+    padding: 3px 5px;
+    display: inline;
+    margin: 0px;
 }
