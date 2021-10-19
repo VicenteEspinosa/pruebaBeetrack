@@ -8,3 +8,8 @@
      padding-left: calc(10px * var(--lat));
     padding-top: calc( 1px * var(--long));
 }
+
+.waypoint{
+    width: 2vw;
+    height: 2vw;
+}
