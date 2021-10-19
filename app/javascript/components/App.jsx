@@ -5,7 +5,6 @@ import Trucks from './Trucks'
 const App = () => {
     return (
     <div>
-        <p>Hello World</p>
         <Map/>
         <Trucks/>
     </div>

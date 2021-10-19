@@ -11,9 +11,7 @@ const Truck = ({license, lat, long}) => {
         <div className={style.container} style={cssProperties}>
             <div className={style.truck}>
                 <img className={style.waypoint} src={require('../../../public/waypoint')} alt="Logo" />
-                <p>License: {license}</p>
-                <p>Lat: {lat}</p>
-                <p>Long: {long}</p>
+                <p className={style.license}>{license}</p>
             </div>
         </div>
     )
