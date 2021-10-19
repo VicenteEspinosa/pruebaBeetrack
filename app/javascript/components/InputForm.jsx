@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import style from '../../assets/stylesheets/InputForm.module.css';
 
-const InputForm = (updateTrucks) => {
+const InputForm = () => {
 
     const [postData, setPostData] = useState({"license": "", "lat": -1, "long": -1});
+
 
 
     const firstUpdate = useRef(true);
@@ -17,9 +18,7 @@ const InputForm = (updateTrucks) => {
         if (postData["license"] !== "" && 0 <= postData["lat"] && postData["lat"]  <= 100 &&  0 <= postData["long"] && postData["long"] <= 100){
             axios.post('/api/v1/trucks', postData)
             .then(resp => {
-                updateTrucks();
-                console.log("AAA");
-                console.log("AA");
+                window.location.reload();
             })
             .catch(resp => {})
         }
@@ -57,15 +56,6 @@ const InputForm = (updateTrucks) => {
             }
         }
 
-    // const postTruck = (e) => {
-    //     e.preventDefault()
-
-    //     axios.post('/api/v1/trucks', {truck})
-    //     .then(resp => {
-    //         debugger
-    //     })
-    //     .catch(resp => {})
-    // }
 
     return(
         <div className={style.inputContainer}>
