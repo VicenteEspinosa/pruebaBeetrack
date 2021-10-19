@@ -2,6 +2,7 @@
   "name": "prueba-beetrack",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.0.0-0",
     "@babel/preset-react": "^7.14.5",
     "@babel/runtime": "^7.15.4",
     "@rails/actioncable": "^6.0.0",

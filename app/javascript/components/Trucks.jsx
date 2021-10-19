@@ -25,7 +25,7 @@ const Trucks = () => {
                />
             ))}
 
-            <div>Esto es trucks</div>
+            
         </div>
     )
 }
