@@ -1,18 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import Truck from './Truck'
 
-const Trucks = () => {
-    const [trucks, setTrucks] = useState([])
-
-    useEffect(()=> {
-        axios.get('/api/v1/trucks.json')
-        .then( resp=> {
-            setTrucks(resp.data.data) 
-            console.log(resp.data.data)
-        })
-        .catch( resp => console.log(resp) )
-    }, [trucks.lenght])
+const Trucks = ({trucks}) => {
 
     return(
         <div>
@@ -24,8 +13,6 @@ const Trucks = () => {
                long={truck.attributes.long}
                />
             ))}
-
-            
         </div>
     )
 }
