@@ -5,8 +5,8 @@
 }
 
 .truck{
-    padding-left: calc(50px + 3.08px * var(--long));
-    padding-top: calc(50px + 3.08px * var(--lat));
+    padding-left: calc(50px + 6px * var(--long));
+    padding-top: calc(50px + 6px * var(--lat));
 }
 
 .waypoint{
