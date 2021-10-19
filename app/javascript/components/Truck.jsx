@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import style from './Truck.module.css';
+import style from '../../assets/stylesheets/Truck.module.css';
 
 const Truck = ({license, lat, long}) => {
     let cssProperties = {
