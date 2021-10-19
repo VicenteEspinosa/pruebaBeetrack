@@ -5,13 +5,13 @@
 }
 
 .truck{
-    padding-left: calc(50px + 6px * var(--long));
-    padding-top: calc(50px + 6px * var(--lat));
+    padding-left: calc(42px + 6px * var(--long));
+    padding-top: calc(35px + 6px * var(--lat));
 }
 
 .waypoint{
-    width: 2vw;
-    height: 2vw;
+    width: 20px;
+    height: 20px;
 }
 
 .license{

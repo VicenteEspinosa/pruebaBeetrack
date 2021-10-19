@@ -3,31 +3,27 @@ import axios from 'axios'
 import Map from './Map'
 import Trucks from './Trucks'
 import InputForm from './InputForm'
+import style from '../../assets/stylesheets/InputForm.module.css';
+
 
 const App = () => {
 
     const [trucks, setTrucks] = useState([])
-    const [Changed_trucks, setChangedTrucks] = useState(-1)
-
-    var updateTrucks = () => {
-        setChangedTrucks(Changed_trucks + 1)
-    }
 
     useEffect(()=> {
         axios.get('/api/v1/trucks.json')
         .then( resp=> {
             setTrucks(resp.data.data)
-            console.log("Busco trucks")
         })
         .catch( resp => console.log(resp) )
-    }, [Changed_trucks])
+    }, [trucks.length])
 
 
     return (
     <div>
         <Map/>
         <Trucks trucks={trucks}/>
-        <InputForm updateTrucks={updateTrucks}/>
+        <InputForm/>
     </div>
 )}
 
