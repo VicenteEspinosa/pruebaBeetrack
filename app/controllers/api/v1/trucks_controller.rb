@@ -16,12 +16,23 @@ module Api
             end
 
             def create
-                truck = Truck.new(truck_params)
+                truck = Truck.find_by(license: params[:license])
 
-                if truck.save
-                    render json: TruckSerializer.new(truck).serialized_json
+                if truck != nil
+                    if truck.update(truck_params)
+                        render json: TruckSerializer.new(truck).serialized_json
+                    else
+                        render json: {error: truck.errors.messages}, status: 422
+                    end
+                    
                 else
-                    render json: {error: truck.errors.messages}, status: 422
+                    truck = Truck.new(truck_params)
+
+                    if truck.save
+                        render json: TruckSerializer.new(truck).serialized_json
+                    else
+                        render json: {error: truck.errors.messages}, status: 422
+                    end
                 end
             end
 
