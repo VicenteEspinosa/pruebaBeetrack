@@ -1,12 +1,22 @@
 .inputContainer{
     position: absolute;
     left: 800px;
+    top: 42px;
     color: black;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9rem 0;
     border-radius: 5px;
     font-size: 20px;
+    border: 2px solid rgb(5, 64, 66);
+    background: #DBD0C0;
 }
+
+.input{
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
 
 .button{
     background-color: #4CAF50;
@@ -14,6 +24,12 @@
     color: white;
     padding: 12px 20px;
     text-decoration: none;
-    margin: 10px 20px;
+    margin: 10px 70px;
     cursor: pointer;
+    border: black 1px solid;
+    border-radius: 4px;
+}
+
+body{
+    background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
