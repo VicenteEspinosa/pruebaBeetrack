@@ -1,0 +1,10 @@
+.container{
+    position: relative;
+    --lat: 120;
+    --long: 200;
+}
+
+.truck{
+     padding-left: calc(10px * var(--lat));
+    padding-top: calc( 1px * var(--long));
+}
